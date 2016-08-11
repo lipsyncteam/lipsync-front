@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Lipsync Beta</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div class="wrapper">
+
+    <div class="header header--inner">
+        <div class="container">
+            <a href="/" class="logo-mini"></a>
+            <a href="#" class="header__back">TO PROFILE</a>
+        </div>
+    </div><!-- header -->
+
+    <div class="content">
+
+        <div class="container">
+
+            <div class="edit-profile">
+                <div class="edit-profile__title">Edit profile</div>
+
+                <form class="form">
+
+                    <div class="edit-profile__wrap">
+                        <div class="edit-profile__block">
+                            <label class="form__label">
+                                First Name
+                                <input type="text" class="form__text-input" />
+                            </label>
+                        </div>
+                        <div class="edit-profile__block">
+                            <label class="form__label">
+                                Last Name
+                                <input type="text" class="form__text-input" />
+                            </label>
+                        </div>
+                        <div class="edit-profile__block edit-profile__block--button">
+                            <input type="submit" class="form__submit form__submit--button" value="Save" />
+                        </div>
+                    </div>
+
+                    <div class="edit-profile__wrap">
+
+                        <div class="edit-profile__sub-title">Change email</div>
+                        <div class="edit-profile__desc">Your email successfully changed to <b>morgannew@gmail.com</b></div>
+
+                        <div class="edit-profile__block">
+                            <label data-error="Wrong email" class="form__label"> <!-- TODO: to output error add class `form__label--error` -->
+                                <input placeholder="Current password" type="text" class="form__text-input" /> <!-- TODO: to output error add class `form__text-input--error` -->
+                            </label>
+                        </div>
+                        <div class="edit-profile__block">
+                            <label data-error="Passwords don’t match." class="form__label">
+                                <input placeholder="New email" type="password" class="form__text-input" />
+                            </label>
+                        </div>
+                        <div class="edit-profile__block edit-profile__block--button-no-padding">
+                            <input type="submit" class="form__submit form__submit--button form__submit--done" value="Done!" />
+                        </div>
+
+                    </div>
+
+                    <div class="edit-profile__wrap">
+
+                        <div class="edit-profile__sub-title">Change password</div>
+
+                        <div class="edit-profile__block edit-profile__block--full">
+                            <label class="form__label">
+                                <input placeholder="Current password" type="password" class="form__text-input" />
+                            </label>
+                        </div>
+
+                        <div class="edit-profile__block">
+                            <label data-error="Wrong email" class="form__label"> <!-- TODO: to output error add class `form__label--error` -->
+                                <input placeholder="New password" type="text" class="form__text-input" /> <!-- TODO: to output error add class `form__text-input--error` -->
+                                <div class="form__label-info">not less than 6 characters</div>
+                            </label>
+                        </div>
+                        <div class="edit-profile__block">
+                            <label data-error="Passwords don’t match." class="form__label">
+                                <input placeholder="Confirm password" type="password" class="form__text-input" />
+                            </label>
+                        </div>
+                        <div class="edit-profile__block edit-profile__block--button-no-padding">
+                            <input type="submit" class="form__submit form__submit--button form__submit--disabled" value="Change" />
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+		    		
+    </div><!-- content -->
+
+</div><!-- wrapper -->
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
+

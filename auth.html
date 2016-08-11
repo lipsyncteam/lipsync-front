@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Lipsync Beta - Auth</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="auth">
+            <a href="/" class="auth__logo"></a>
+
+            <form class="auth__form" action="" method="post">
+                <div class="auth__title">
+                    Sign In
+                    <a href="#">Register</a>
+                </div>
+                <label data-error="Wrong email" class="form__label form__label--auth">
+                    Email
+                    <input type="text" class="form__text-input" />
+                </label>
+                <label data-error="Wrong email" class="form__label form__label--auth">
+                    Password
+                    <input type="password" class="form__text-input" />
+                </label>
+                <div class="auth__keep-me">
+                    <span class="checkbox js-checkbox">
+                        <input type="checkbox" value="" />
+                    </span>
+                    Keep me signed in
+                </div>
+                <input class="auth__submit" type="submit" value="Sign In" />
+                <a href="#" class="auth__forgot">Forgot Password?</a>
+                <div class="auth__copy">
+                    Copyright 2016 - Lipsync 苏ICP备16032445号
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+<script src="js/script.js"></script>
+
+</html>

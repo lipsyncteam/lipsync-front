@@ -1,0 +1,426 @@
+.payment {
+  &__content {
+
+  }
+
+  &__title {
+    margin-top: 42px;
+    width: 100%;
+    padding-bottom: 13px;
+    border-bottom: solid 1px #e6e6e6;
+    position: relative;
+
+    .screen-lk({
+      padding: 12px 15px;
+      margin-left: -15px;
+      margin-top: 0;
+    });
+
+    &-text {
+      line-height: 36px;
+      font-family: @SFDisplay;
+      font-size: 30px;
+      font-weight: normal;
+      letter-spacing: 0.4px;
+      color: #000000;
+
+      .screen-lk({
+        font-size: 28px;
+      });
+    }
+
+    &-balance {
+      line-height: 21px;
+      font-family: @SFText;
+      font-size: 18px;
+      font-weight: normal;
+      letter-spacing: -0.5px;
+      text-align: right;
+      color: #000000;
+      position: absolute;
+      right: 0;
+      top: 10px;
+      padding-right: 150px;
+
+      &:before {
+        content: 'Your credit balance';
+
+        .screen-lk({
+          content: 'Balance';
+        });
+      }
+
+      span {
+        line-height: 16px;
+        font-family: @SFText;
+        font-size: 14px;
+        font-weight: normal;
+        letter-spacing: -0.2px;
+        text-align: right;
+        position: absolute;
+        right: 0;
+        top: 5px;
+        color: #000000;
+      }
+
+      .screen-lk({
+        position: relative;
+        top: 0;
+        padding-right: 120px;
+        margin-top: 16px;
+        text-align: left;
+        margin-bottom: 5px;
+      });
+    }
+  }
+
+  &__choose {
+    padding-top: 75px;
+
+    .screen-lk({
+      padding-top: 22px;
+    });
+
+    &-title {
+      font-family: @SFDisplay;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: 0.4px;
+      text-align: center;
+      margin-bottom: 68px;
+
+      .screen-lk({
+        padding: 0 15px;
+        margin-bottom: 34px;
+      });
+    }
+  }
+
+  &__select {
+    border-bottom: solid 2px #e6e6e6;
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 0;
+
+    .screen-lk({
+      margin-bottom: 30px;
+    });
+
+    &-item {
+      width: 180px;
+      line-height: 54px;
+      font-family: @GothemProMedium;
+      font-size: 60px;
+      text-align: center;
+      color: @blue;
+      display: inline-block;
+      vertical-align: top;
+      text-decoration: none;
+      position: relative;
+
+      .screen-lk({
+        width: 33.33%;
+        font-size: 36px;
+        line-height: 43px;
+      });
+
+      span {
+        line-height: 16px;
+        font-family: @SFText;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: -0.2px;
+        text-align: center;
+        color: #999999;
+        padding: 17px 0;
+        display: block;
+
+        .screen-lk({
+          font-size: 11px;
+          line-height: 14px;
+          padding-top: 5px;
+          padding-bottom: 12px;
+        });
+      }
+
+      &--active {
+        color: #000000;
+
+        span { color: #000000 }
+
+        &:after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 2px;
+          background-color: #000000;
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  &__buttons {
+    text-align: center;
+
+    &-desc {
+      line-height: 16px;
+      font-family: @SFText;
+      font-size: 12px;
+      font-weight: normal;
+      line-height: 16px;
+      color: #999999;
+      padding-left: 18px;
+      position: relative;
+      width: 410px;
+      margin: 0 auto;
+      margin-top: 21px;
+
+      .screen-lk({
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 15px;
+      });
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0.5px;
+        .svg-svg--lock;
+        .svg-svg--lock-dims;
+      }
+
+      a {
+        height: 16px;
+        font-family: @SFText;
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 16px;
+        color: @blue;
+        text-decoration: none;
+
+        &:hover { text-decoration: underline }
+      }
+    }
+  }
+
+  &__methods {
+    text-align: center;
+    padding-top: 23px;
+
+    &-visa {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 15px;
+    }
+
+    &-express {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  &__footer {
+    position: absolute;
+    width: 100%;
+    height: 62px;
+    background-color: #ffffff;
+    border-top: solid 1px #e6e6e6;
+    bottom: 0;
+    left: 0;
+
+    .screen-lk({
+      position: relative;
+      margin-top: 18px;
+    });
+
+    &-text {
+      width: 100%;
+      line-height: 62px;
+      font-family: @SFText;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: -0.2px;
+      text-align: center;
+      color: #000000;
+
+      a {
+        line-height: 62px;
+        font-family: @SFText;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: -0.2px;
+        text-align: center;
+        color: @blue;
+        text-decoration: none;
+
+        &:hover { text-decoration: underline }
+      }
+    }
+  }
+
+  &__unlimited {
+    text-align: center;
+    margin-bottom: 42px;
+
+    .screen-lk({
+      margin-bottom: 24px;
+    });
+
+    &-title {
+      font-family: @GothemProMedium;
+      font-size: 60px;
+      text-align: center;
+      color: #000000;
+      margin-bottom: 12px;
+
+      .screen-lk({
+        font-size: 30px;
+        line-height: 37px;
+      });
+    }
+
+    &-desc {
+      p {
+        font-family: @SFText;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 26px;
+        letter-spacing: -0.2px;
+        text-align: center;
+        color: #000000;
+        margin: 0;
+      }
+    }
+  }
+
+  &__failure {
+    margin-top: 70px;
+    text-align: center;
+    padding-top: 146px;
+    position: relative;
+
+    .screen-lk({
+      margin-top: 34px;
+      padding-top: 126px;
+    });
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -45px;
+      .svg-svg--failure;
+      .svg-svg--failure-dims;
+    }
+
+    &-title {
+      line-height: 24px;
+      font-family: @SFDisplay;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 0.4px;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    &-text {
+      padding-bottom: 35px;
+
+      p {
+        font-family: @SFText;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 19px;
+        letter-spacing: -0.2px;
+        text-align: center;
+        color: #212224;
+        margin: 0;
+      }
+    }
+
+    &-buttons {
+      font-size: 0;
+      margin-bottom: 25px;
+
+      a {
+        &:first-child { margin-right: 10px }
+      }
+    }
+  }
+
+  &__success {
+    margin-top: 70px;
+    text-align: center;
+    padding-top: 146px;
+    position: relative;
+    padding-bottom: 75px;
+    border-bottom: solid 1px #e6e6e6;
+
+    .screen-lk({
+      margin-top: 34px;
+      padding-bottom: 34px;
+      padding-top: 126px;
+    });
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -45px;
+      .svg-svg--success;
+      .svg-svg--success-dims;
+    }
+
+    &-title {
+      line-height: 24px;
+      font-family: @SFDisplay;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 0.4px;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    &-text {
+      line-height: 21px;
+      font-family: @SFText;
+      font-size: 18px;
+      font-weight: normal;
+      letter-spacing: -0.5px;
+      text-align: center;
+    }
+  }
+
+  &__recharge {
+    padding-top: 40px;
+    text-align: center;
+    margin-bottom: 25px;
+
+    .checkbox {
+      margin-right: 12px;
+      margin-top: -2px;
+    }
+
+    &-text {
+      position: relative;
+      font-family: @SFText;
+      text-align: center;
+      font-size: 18px;
+      font-weight: normal;
+      line-height: 25px;
+      letter-spacing: -0.5px;
+      color: #000000;
+      margin-bottom: 45px;
+    }
+  }
+}

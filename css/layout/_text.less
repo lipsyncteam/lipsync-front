@@ -1,0 +1,98 @@
+.text {
+  & > * {
+    padding-right: 150px;
+
+    .screen-mobile({
+      padding-right: 0;
+    })
+  }
+
+  & > h2 {
+    padding-top: 25px;
+    line-height: 21px;
+    font-family: @SFText;
+    font-size: 18px;
+    font-weight: normal;
+    letter-spacing: -0.5px;
+    color: #000000;
+    margin-bottom: 18px;
+  }
+
+  & > h3 {
+    padding-top: 15px;
+    line-height: 20px;
+    font-family: @SFText;
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: -0.5px;
+    color: #000000;
+    margin-bottom: 18px;
+  }
+
+  & > p {
+    font-family: @SFText;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: -0.2px;
+    color: #262626;
+    padding-bottom: 25px;
+
+    &:first-child {
+      padding-top: 25px;
+    }
+
+    a {
+      font-family: @SFText;
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 20px;
+      letter-spacing: -0.2px;
+      color: @blue;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  & > ul {
+    li {
+      padding-left: 17px;
+      position: relative;
+      font-family: @SFText;
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 20px;
+      letter-spacing: -0.2px;
+      color: #262626;
+      padding-bottom: 20px;
+
+      &:before {
+        content: '';
+        width: 5px;
+        height: 5px;
+        background-color: #000000;
+        border-radius: 100%;
+        position: absolute;
+        left: 0;
+        top: 7.5px;
+      }
+
+      a {
+        font-family: @SFText;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 20px;
+        letter-spacing: -0.2px;
+        color: @blue;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

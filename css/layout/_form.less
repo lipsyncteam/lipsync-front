@@ -1,0 +1,246 @@
+.form {
+
+  &__label {
+    display: block;
+    font-family: @SFText;
+    font-size: 18px;
+    line-height: 18px;
+    color: #000000;
+    position: relative;
+    height: 76px;
+
+    &--auth {
+      margin-bottom: 28px;
+    }
+
+    &--width-info {
+      margin-bottom: 46px;
+    }
+
+    &--success {
+      &:before {
+        content: '';
+        .svg-svg--ok;
+        .svg-svg--ok-dims;
+        position: absolute;
+        right: -38px;
+        top: 40px;
+
+        .screen-mobile({
+          right: 0;
+          top: 0;
+        });
+      }
+    }
+
+    &-info {
+      font-family: @SFText;
+      font-size: 12px;
+      font-weight: normal;
+      line-height: 20px;
+      color: #aaaaaa;
+      position: absolute;
+      left: 0;
+      bottom: -22px;
+    }
+
+    &--error {
+      &:after {
+        content: attr(data-error);
+        font-family: @SFText;
+        font-size: 14px;
+        line-height: 18px;
+        color: #ee2e2e;
+        position: absolute;
+        bottom: -25px;
+        left: 0;
+      }
+    }
+
+    &-email-error {
+      width: 260px;
+      height: 38px;
+      font-family: @SFText;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 19px;
+      letter-spacing: -0.2px;
+      position: absolute;
+      right: -280px;
+      top: 32.5px;
+      display: none;
+
+      .screen-lk({
+        position: static;
+        margin-top: 7px;
+      });
+
+      span {
+        color: #ee2e2e;
+      }
+
+      p {
+        color: #aaaaaa;
+
+        a {
+          font-family: @SFText;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 19px;
+          letter-spacing: -0.2px;
+          text-decoration: none;
+          color: @blue;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+      }
+    }
+
+    &--email {
+      &.form__label--error {
+        .screen-lk({
+          height: 120px;
+        });
+
+        &:after {
+          display: none !important;
+        }
+      }
+    }
+
+    &--c-pass {
+      &.form__label--error {
+        .screen-desktop({
+          &:after {
+            position: absolute;
+            bottom: 77px;
+            left: 320px;
+            width: 200px;
+          }
+          &:before {
+            content: '';
+            display: block;
+            .svg-svg--lines;
+            .svg-svg--lines-dims;
+            position: absolute;
+            left: 310px;
+            top: -72px;
+          }
+        });
+      }
+    }
+
+    &--pass {
+      &.form__label--error {
+        &:after {
+          display: none !important;
+        }
+      }
+    }
+
+    &--no-text {
+      height: 60px;
+    }
+  }
+
+  &__text-input {
+    width: calc(~'100% - 22px');
+    border-radius: 5px;
+    box-shadow: inset 0 2px 0 0 rgba(0, 0, 0, 0.06);
+    border: solid 1px #d8d8d8;
+    font-weight: 600;
+    font-family: @SFText;
+    height: 17px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000 !important;
+    padding: 14px 10px;
+    margin-top: 10px;
+
+    &:focus {
+      border: solid 2px @blue;
+      outline: none;
+      margin-top: 9px;
+      margin-left: -1px;
+      box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    &--error {
+      border: solid 2px #ee2e2e !important;
+      outline: none;
+      margin-top: 9px;
+      margin-left: -1px;
+      color: #ee2e2e;
+      box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+
+  &__submit {
+    width: 300px;
+    border-radius: 5px;
+    background-color: @blue;
+    font-family: @Helvetica, @Arial, @font;
+    font-weight: 500;
+    padding: 14px 0;
+    font-size: 18px;
+    line-height: 0.9;
+    color: #ffffff;
+    border: 0 none;
+    display: inline-block;
+    vertical-align: middle;
+
+    &--button {
+      width: 140px;
+    }
+
+    &--disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    &--done {
+      pointer-events: none;
+      background-color: rgba(40,182,255,0.1);
+      color: @blue;
+    }
+
+    &--send {
+      pointer-events: none;
+      background-color: rgba(40,182,255,0.1);
+      color: @blue;
+      width: 100%;
+      font-size: 14px;
+    }
+
+    .screen-mobile({
+      width: 100%;
+    });
+
+    &:hover { background-color: #1ea4ea; }
+  }
+}
+
+.checkbox {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  .svg-svg--checkbox;
+  .svg-svg--checkbox-dims;
+
+  input { display: none; }
+
+  &--check {
+    .svg-svg--checkbox-active;
+    .svg-svg--checkbox-active-dims;
+  }
+}
+
+.form__label--error {
+  .form__label-email-error { display: block }
+}

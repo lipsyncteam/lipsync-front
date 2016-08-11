@@ -1,0 +1,115 @@
+.popover {
+  position: absolute;
+  width: 192px;
+  height: 93px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.05);
+  border: solid 1px #dbdbdb;
+  top: -90px;
+  left: -11px;
+  display: none;
+
+  .screen-mobile({
+    position: relative;
+    width: calc(~'100% + 30px');
+    border: 0 none;
+    border-bottom: solid 1px #dbdbdb;
+    top: 0;
+    left: -15px;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.05);
+    border-radius: 0;
+    margin-bottom: 10px;
+  });
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -16px;
+    left: 85px;
+    border-style: solid;
+    border-width: 16px 16px 0;
+    border-color: #FFFFFF transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+
+    .screen-mobile({
+      bottom: -15px;
+      left: 15px;
+    });
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 84px;
+    bottom: -17px;
+    border-style: solid;
+    border-width: 17px 17px 0;
+    border-color: #dbdbdb transparent;
+    display: block;
+    width: 0;
+    z-index: 0;
+
+    .screen-mobile({
+      bottom: -16px;
+      left: 14px;
+    });
+  }
+
+  &__link {
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    line-height: 47px;
+    font-family: @SFText;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+    color: @blue;
+    display: block;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    .screen-mobile({
+      text-align: left;
+      text-indent: 15px;
+    });
+
+    &--ios {
+      border-bottom: solid 1px #e6e6e6;
+
+      &:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        .svg-svg--logo-apple;
+        .svg-svg--logo-apple-dims;
+        margin-right: 10px;
+        margin-top: -4px;
+
+        .screen-mobile({
+          display: none;
+        });
+      }
+    }
+
+    &--android {
+      &:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        .svg-svg--logo-android;
+        .svg-svg--logo-android-dims;
+        margin-right: 10px;
+        margin-top: -2px;
+
+        .screen-mobile({
+          display: none;
+        });
+      }
+    }
+  }
+}

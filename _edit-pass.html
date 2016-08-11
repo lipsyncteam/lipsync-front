@@ -1,0 +1,29 @@
+<div class="popup">
+    <div class="popup__title">Change password</div>
+
+    <div class="popup__manage popup__manage--edit">
+
+        <div class="auth auth--popup">
+            <form class="auth__form auth__form--popup" action="" method="post">
+                <label data-error="Wrong email" class="form__label form__label--auth">
+                    Current password
+                    <input type="password" class="form__text-input" />
+                </label>
+                <label data-error="Wrong email" class="form__label form__label--auth">
+                    New password
+                    <input type="password" class="form__text-input" />
+                    <div class="form__label-info">not less than 6 characters</div>
+                </label>
+                <label data-error="Wrong email" class="form__label form__label--auth">
+                    Confirm password
+                    <input type="password" class="form__text-input" />
+                </label>
+            </form>
+        </div>
+
+    </div>
+    <div class="popup__manage-buttons">
+        <a href="#" class="button button--again button--disabled">Save</a>
+        <a href="javascript:void(0)" class="button button--cancel js-close-popup">Cancel</a>
+    </div>
+</div>

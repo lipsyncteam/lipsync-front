@@ -1,0 +1,152 @@
+.edit-profile {
+  margin-top: 42px;
+  width: 780px;
+
+  .screen-mobile({
+    width: 100%;
+  });
+
+
+  &__title {
+    line-height: 36px;
+    font-family: @SFDisplay;
+    font-size: 30px;
+    font-weight: normal;
+    letter-spacing: 0.4px;
+    color: #000000;
+    margin-bottom: 30px;
+
+    .screen-mobile({
+      margin-bottom: 28px;
+    });
+  }
+
+  &__wrap {
+    border-bottom: solid 1px #e6e6e6;
+    font-size: 0;
+
+    &:last-child { border-bottom: 0 none; }
+  }
+
+  &__block {
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+
+    &--button {
+      width: 140px;
+      margin-right: 0;
+      padding-top: 28px;
+
+      .screen-mobile({
+        padding-top: 0;
+      });
+    }
+
+    &--button-no-padding {
+      width: 140px;
+      margin-right: 0;
+      padding-top: 10px;
+
+      .screen-mobile({
+        padding-top: 0;
+      });
+    }
+
+    &--full {
+      margin-right: 370px;
+
+      .screen-mobile({
+        margin-bottom: 35px;
+      });
+    }
+
+    .screen-mobile({
+      display: block;
+      width: 100%;
+      margin-right: 0;
+    });
+  }
+
+  &__buttons-block {
+    padding-top: 20px;
+
+    .screen-mobile({
+      text-align: center;
+      padding-top: 0;
+    });
+  }
+
+  &__cancel {
+    font-family: @Helvetica, @Arial, @font;
+    font-size: 18px;
+    line-height: 18px;
+    color: #28b6ff;
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+    margin-left: 40px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    .screen-mobile({
+      margin-left: 0;
+      margin-top: 30px;
+      margin-bottom: 50px;
+    });
+  }
+
+  &__sub-title {
+    margin-bottom: 17px;
+    font-family: @SFText;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 18px;
+    letter-spacing: -0.5px;
+    color: #000000;
+  }
+
+  &__desc {
+    font-family: @SFText;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #000000;
+    margin-bottom: 17px;
+  }
+
+  &__change {
+    padding: 30px 0;
+
+    &-text {
+      font-family: @SFText;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 18px;
+      letter-spacing: -0.2px;
+      color: #000000;
+      display: inline-block;
+      vertical-align: middle;
+      width: 160px;
+    }
+
+    &-link {
+      font-family: @SFText;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 18px;
+      letter-spacing: -0.2px;
+      color: @blue;
+      display: inline-block;
+      vertical-align: middle;
+      text-decoration: none;
+
+      &:hover { text-decoration: underline }
+    }
+  }
+}
